@@ -10,4 +10,6 @@ public class ConsumerProperties {
     private String bootstrapServers = "";
     private String groupId = "";
     private String autoOffsetReset = "earliest";
+    private String redisHostname = "";
+    private Integer redisPort = 6379;
 }

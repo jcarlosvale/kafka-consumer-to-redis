@@ -4,11 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.redis.core.RedisHash;
+
+import java.io.Serializable;
 
 /*
 Represents the People Data
  */
 @Data
+@RedisHash("PeopleDTO")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
