@@ -21,6 +21,7 @@ public class ConsumerKafkaService {
     public void receive(@Payload PeopleDTO data,
                         @Headers MessageHeaders headers) {
         log.info("received data='{}'", data);
+        data.setId(Long.toString(System.currentTimeMillis()));
         repository.save(data);
 /*
         headers.keySet().forEach(key -> {

@@ -16,7 +16,8 @@ Represents the People Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class PeopleDTO {
+public class PeopleDTO implements Serializable{
+    private String id;
     private String firstName;
     private String lastName;
     private Double baseSeed;
