@@ -21,4 +21,6 @@ public class PeopleDTO implements Serializable{
     private String firstName;
     private String lastName;
     private Double baseSeed;
+    private Double socialRatingScore;
+    private Integer age;
 }
