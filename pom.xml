@@ -17,6 +17,7 @@
     <properties>
         <java.version>11</java.version>
         <testcontainers.version>1.11.4</testcontainers.version>
+        <embedded-redis.version>0.7.3</embedded-redis.version>
     </properties>
 
     <dependencies>
@@ -89,6 +90,12 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>it.ozimov</groupId>
+            <artifactId>embedded-redis</artifactId>
+            <version>${embedded-redis.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
