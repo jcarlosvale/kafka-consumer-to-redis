@@ -24,6 +24,7 @@ public class ConsumerKafkaService {
         peopleDTO.setId(Long.toString(System.currentTimeMillis()));
         calculateScore(peopleDTO);
         log.info("{} {} has {} score", peopleDTO.getFirstName(), peopleDTO.getLastName(), peopleDTO.getSocialRatingScore());
+        log.info("saving REDIS data='{}'", peopleDTO);
         return repository.save(peopleDTO);
     }
 
