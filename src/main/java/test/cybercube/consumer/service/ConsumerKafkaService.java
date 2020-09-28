@@ -16,12 +16,12 @@ public class ConsumerKafkaService {
     private final PeopleDTORepository repository;
 
     @KafkaListener(topics = "${consumer.topic}")
-    public void receive(@Payload PeopleDTO peopleDTO) {
+    public PeopleDTO receive(@Payload PeopleDTO peopleDTO) {
         log.info("received data='{}'", peopleDTO);
         peopleDTO.setId(Long.toString(System.currentTimeMillis()));
         calculateScore(peopleDTO);
         log.info("{} {} has {} score", peopleDTO.getFirstName(), peopleDTO.getLastName(), peopleDTO.getSocialRatingScore());
-        repository.save(peopleDTO);
+        return repository.save(peopleDTO);
     }
 
     private void calculateScore(PeopleDTO peopleDTO) {

@@ -1,0 +1,15 @@
+consumer:
+  #topic: "some_topic"
+  #bootstrap-servers: "127.0.0.1:9092"
+  group-id: "some_group"
+  auto-offset-reset: "earliest"
+  redis-hostname: "localhost"
+  redis-port: 6379
+
+logging:
+  level:
+    root: info
+
+spring:
+  main:
+    web-application-type: none

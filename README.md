@@ -25,6 +25,7 @@ Input:
 * Maven 
 * Kafka
 * Redis
+* Testcontainer
 
 ##Setting up Kafka's Docker
 The files used by me you can find inside the docker folder in the project.
